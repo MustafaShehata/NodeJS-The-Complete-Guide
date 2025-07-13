@@ -105,16 +105,92 @@
 
 // ******* 20. Destructuring *******
 
-const person = {
-  name: 'Max',
-  age: 29,
-  greet() {
-    console.log("Hi, I'm " + this.name);
-  }
-};
+// const person = {
+//   name: 'Max',
+//   age: 29,
+//   greet() {
+//     console.log("Hi, I'm " + this.name);
+//   }
+// };
 
-const printName = (personData) => {
-  console.log(personData.name);
-};
+// Object Destructuring
+// const printName = ({ name }) => {
+//   console.log(name);
+// }
 
-printName(person);
+// printName(person);
+
+// const { name, age } = person;
+// console.log(name, age);
+
+// const printName = (personData) => {
+//   console.log(personData.name);
+// };
+
+// printName(person);
+
+// Array destrcuturing
+// const hobbies = ['Sports', 'Cooking'];
+// const [hobby1, hobby2] = hobbies;
+// console.log("Hobby1: " + hobby1 + "\nHobby2: " + hobby2);
+
+// const obj = {
+//   name: "Seb",
+//   sayHi() {
+//     return "Hi! " + obj.name;
+//   }
+// };
+
+// function someFunction({ sayHi }) {
+//   console.log(sayHi());
+// }
+
+// someFunction(obj);
+// console.log(obj.sayHi());
+
+// ******** 21. Async Code & Promises ********
+
+// Need to be reviewed and study well
+
+// const fetchData = callback => {
+//   setTimeout(() => {
+//     callback("Done!");
+//   }, 1500);
+// };
+
+// // Async function
+// setTimeout(() => {
+//   console.log("Timer is done!");
+//   fetchData(text => {
+//     console.log(text);
+//   });
+// }, 2000); // 2s
+
+
+
+// const fetchData = () => {
+//   const promise = new Promise((resolve, reject) => {
+//     setTimeout(() => {
+//       resolve("Done!");
+//     }, 1500);
+//   });
+//   return promise;
+// };
+
+// setTimeout(() => {
+//   console.log("Timer is done!");
+//   fetchData()
+//     .then(text => {
+//       console.log(text);
+//       return fetchData();
+//     })
+//     .then(text2 => {
+//       console.log(text2);
+//     });
+// }, 2000);
+
+// console.log("Hello!");
+// console.log("Hi!");
+
+
+
